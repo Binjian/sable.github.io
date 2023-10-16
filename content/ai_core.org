@@ -1,0 +1,89 @@
+:PROPERTIES:
+:ID:       9dd3692c-6715-4515-abee-56fd244fe0df
+:END:
+#+title: AI-Core
+
+* code
+** pythonic refactoring
+*** dataclass
+*** ABC for expanding
+**** RL toolkit
+**** datastore (db, cluster)
+**** observation/flashing interface (EC1, iC1, ...)
+**** Exception handling
+*** database technology (indexing, storage, DVC)
+*** refactor in pytorch
+*** transformer implementation
+** VCS (git)
+*** publishing
+*** subscription
+*** autotest
+* Projects
+** development harness
+*** DL model tuning
+**** training
+**** testing
+**** validation
+**** data pipeline
+** debugging on the cloud
+** database
+** docker compose, K8s
+* Deep Learning
+** Reinforcement learning
+*** *Offline reinforcement learning*
+*** *RLHF in VEOS (convergence boundary, performance enhancement)*
+*** efficient search in memory （experience pool)
+*** transformer based decision system
+*** Federated Learning
+** Generative model
+*** *Diffusion model*
+*** *transformer application*
+*** *Application of new TS features from EP*
+** transformer application in DRL and Generative modeling
+** Foundational Model exploration
+*** Image captioning (scene understanding)
+*** Policy selection/Planning with Instructions
+** Building TS foundation model
+
+** Use Cases
+*** Highway Lane Change
+**** Prompt Template for highway lane change decision
+#+NAME: Prompt Template for Highway Lane Change Decision
+#+BEGIN_SRC python :session :results output
+import os
+import openai
+from dotenv import load_dotenv
+from pathlib import Path  # Python 3.6+ only
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+# load_dotenv(verbose=True)
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
+openai_api_key=os.environ.get('OPENAI_API4_LANGCHAIN')
+openai.proxy = os.environ.get('HTTP_PROXY')
+
+
+from langchain.llms import OpenAI
+from langchain import PromptTemplate
+
+llm = OpenAI(model_name="text-davinci-003", openai_api_key=openai_api_key)
+
+template = """
+"You're an experienced safe driver. {objects_on_left_lane}. The front car is {front_car_distance} ahead of me {front_car_speed}. I'm driving {ego_speed}. {condition_of_urgency}, should I change my lane or keep following the front car?"
+"""
+prompt1 = PromptTemplate(
+    input_variables=["objects_on_left_lane","front_car_distance", "front_car_speed", "ego_speed", "condition_of_urgency"],
+    template=template,
+)
+pp.pprint(f"prompt1: {prompt1}")
+#return prompt1
+# prompt1
+#+END_SRC
+
+**** lane change case 1
+
+#+attr_org: :width 300px
+[[./img/Use_Cases/_20231011_16584629.png]]
+
+#+attr_org: :width 300px
+[[./img/Use_Cases/_20231011_165912single_mo_follow.gif]]

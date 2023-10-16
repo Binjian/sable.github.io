@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI-Core</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AI-Core</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2ff0b5e">code</a>
+<ul>
+<li><a href="#orge0ae446">pythonic refactoring</a>
+<ul>
+<li><a href="#org42fb6af">dataclass</a></li>
+<li><a href="#org5996dff">ABC for expanding</a></li>
+<li><a href="#orgea2478f">database technology (indexing, storage, DVC)</a></li>
+<li><a href="#orgf69fc08">refactor in pytorch</a></li>
+<li><a href="#org3a88d3b">transformer implementation</a></li>
+</ul>
+</li>
+<li><a href="#orgffbaaa7">VCS (git)</a>
+<ul>
+<li><a href="#org637a352">publishing</a></li>
+<li><a href="#orgf32e2a1">subscription</a></li>
+<li><a href="#orgdfec6be">autotest</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3fc7b15">Projects</a>
+<ul>
+<li><a href="#org0ded485">development harness</a>
+<ul>
+<li><a href="#org6c3e72b">DL model tuning</a></li>
+</ul>
+</li>
+<li><a href="#org96e280e">debugging on the cloud</a></li>
+<li><a href="#orgfb55d57">database</a></li>
+<li><a href="#org08de34e">docker compose, K8s</a></li>
+</ul>
+</li>
+<li><a href="#orgcfbf6e6">Deep Learning</a>
+<ul>
+<li><a href="#orge8256c8">Reinforcement learning</a>
+<ul>
+<li><a href="#org013aba1"><b>Offline reinforcement learning</b></a></li>
+<li><a href="#orgab4edff"><b>RLHF in VEOS (convergence boundary, performance enhancement)</b></a></li>
+<li><a href="#org751f803">efficient search in memory （experience pool)</a></li>
+<li><a href="#org8d0ad56">transformer based decision system</a></li>
+<li><a href="#org90d6b5c">Federated Learning</a></li>
+</ul>
+</li>
+<li><a href="#orgcf55d7d">Generative model</a>
+<ul>
+<li><a href="#org85302a5"><b>Diffusion model</b></a></li>
+<li><a href="#orged162aa"><b>transformer application</b></a></li>
+<li><a href="#org5cc93f3"><b>Application of new TS features from EP</b></a></li>
+</ul>
+</li>
+<li><a href="#orgc149580">transformer application in DRL and Generative modeling</a></li>
+<li><a href="#org0e2ef86">Foundational Model exploration</a>
+<ul>
+<li><a href="#orgdee3f00">Image captioning (scene understanding)</a></li>
+<li><a href="#org32689e4">Policy selection/Planning with Instructions</a></li>
+</ul>
+</li>
+<li><a href="#org42d62b6">Building TS foundation model</a></li>
+<li><a href="#org744af26">Use Cases</a>
+<ul>
+<li><a href="#org05977ff">Highway Lane Change</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2ff0b5e" class="outline-2">
+<h2 id="org2ff0b5e">code</h2>
+<div class="outline-text-2" id="text-org2ff0b5e">
+</div>
+<div id="outline-container-orge0ae446" class="outline-3">
+<h3 id="orge0ae446">pythonic refactoring</h3>
+<div class="outline-text-3" id="text-orge0ae446">
+</div>
+<div id="outline-container-org42fb6af" class="outline-4">
+<h4 id="org42fb6af">dataclass</h4>
+</div>
+<div id="outline-container-org5996dff" class="outline-4">
+<h4 id="org5996dff">ABC for expanding</h4>
+<div class="outline-text-4" id="text-org5996dff">
+</div>
+<ul class="org-ul">
+<li><a id="org0470bb5"></a>RL toolkit<br /></li>
+<li><a id="orgf9ed380"></a>datastore (db, cluster)<br /></li>
+<li><a id="orgce59a1e"></a>observation/flashing interface (EC1, iC1, &#x2026;)<br /></li>
+<li><a id="org32fe90e"></a>Exception handling<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgea2478f" class="outline-4">
+<h4 id="orgea2478f">database technology (indexing, storage, DVC)</h4>
+</div>
+<div id="outline-container-orgf69fc08" class="outline-4">
+<h4 id="orgf69fc08">refactor in pytorch</h4>
+</div>
+<div id="outline-container-org3a88d3b" class="outline-4">
+<h4 id="org3a88d3b">transformer implementation</h4>
+</div>
+</div>
+<div id="outline-container-orgffbaaa7" class="outline-3">
+<h3 id="orgffbaaa7">VCS (git)</h3>
+<div class="outline-text-3" id="text-orgffbaaa7">
+</div>
+<div id="outline-container-org637a352" class="outline-4">
+<h4 id="org637a352">publishing</h4>
+</div>
+<div id="outline-container-orgf32e2a1" class="outline-4">
+<h4 id="orgf32e2a1">subscription</h4>
+</div>
+<div id="outline-container-orgdfec6be" class="outline-4">
+<h4 id="orgdfec6be">autotest</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org3fc7b15" class="outline-2">
+<h2 id="org3fc7b15">Projects</h2>
+<div class="outline-text-2" id="text-org3fc7b15">
+</div>
+<div id="outline-container-org0ded485" class="outline-3">
+<h3 id="org0ded485">development harness</h3>
+<div class="outline-text-3" id="text-org0ded485">
+</div>
+<div id="outline-container-org6c3e72b" class="outline-4">
+<h4 id="org6c3e72b">DL model tuning</h4>
+<div class="outline-text-4" id="text-org6c3e72b">
+</div>
+<ul class="org-ul">
+<li><a id="org3cd4adf"></a>training<br /></li>
+<li><a id="orgbf44ac4"></a>testing<br /></li>
+<li><a id="orgdcc6031"></a>validation<br /></li>
+<li><a id="org3a37419"></a>data pipeline<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96e280e" class="outline-3">
+<h3 id="org96e280e">debugging on the cloud</h3>
+</div>
+<div id="outline-container-orgfb55d57" class="outline-3">
+<h3 id="orgfb55d57">database</h3>
+</div>
+<div id="outline-container-org08de34e" class="outline-3">
+<h3 id="org08de34e">docker compose, K8s</h3>
+</div>
+</div>
+<div id="outline-container-orgcfbf6e6" class="outline-2">
+<h2 id="orgcfbf6e6">Deep Learning</h2>
+<div class="outline-text-2" id="text-orgcfbf6e6">
+</div>
+<div id="outline-container-orge8256c8" class="outline-3">
+<h3 id="orge8256c8">Reinforcement learning</h3>
+<div class="outline-text-3" id="text-orge8256c8">
+</div>
+<div id="outline-container-org013aba1" class="outline-4">
+<h4 id="org013aba1"><b>Offline reinforcement learning</b></h4>
+</div>
+<div id="outline-container-orgab4edff" class="outline-4">
+<h4 id="orgab4edff"><b>RLHF in VEOS (convergence boundary, performance enhancement)</b></h4>
+</div>
+<div id="outline-container-org751f803" class="outline-4">
+<h4 id="org751f803">efficient search in memory （experience pool)</h4>
+</div>
+<div id="outline-container-org8d0ad56" class="outline-4">
+<h4 id="org8d0ad56">transformer based decision system</h4>
+</div>
+<div id="outline-container-org90d6b5c" class="outline-4">
+<h4 id="org90d6b5c">Federated Learning</h4>
+</div>
+</div>
+<div id="outline-container-orgcf55d7d" class="outline-3">
+<h3 id="orgcf55d7d">Generative model</h3>
+<div class="outline-text-3" id="text-orgcf55d7d">
+</div>
+<div id="outline-container-org85302a5" class="outline-4">
+<h4 id="org85302a5"><b>Diffusion model</b></h4>
+</div>
+<div id="outline-container-orged162aa" class="outline-4">
+<h4 id="orged162aa"><b>transformer application</b></h4>
+</div>
+<div id="outline-container-org5cc93f3" class="outline-4">
+<h4 id="org5cc93f3"><b>Application of new TS features from EP</b></h4>
+</div>
+</div>
+<div id="outline-container-orgc149580" class="outline-3">
+<h3 id="orgc149580">transformer application in DRL and Generative modeling</h3>
+</div>
+<div id="outline-container-org0e2ef86" class="outline-3">
+<h3 id="org0e2ef86">Foundational Model exploration</h3>
+<div class="outline-text-3" id="text-org0e2ef86">
+</div>
+<div id="outline-container-orgdee3f00" class="outline-4">
+<h4 id="orgdee3f00">Image captioning (scene understanding)</h4>
+</div>
+<div id="outline-container-org32689e4" class="outline-4">
+<h4 id="org32689e4">Policy selection/Planning with Instructions</h4>
+</div>
+</div>
+<div id="outline-container-org42d62b6" class="outline-3">
+<h3 id="org42d62b6">Building TS foundation model</h3>
+</div>
+
+<div id="outline-container-org744af26" class="outline-3">
+<h3 id="org744af26">Use Cases</h3>
+<div class="outline-text-3" id="text-org744af26">
+</div>
+<div id="outline-container-org05977ff" class="outline-4">
+<h4 id="org05977ff">Highway Lane Change</h4>
+<div class="outline-text-4" id="text-org05977ff">
+</div>
+<ul class="org-ul">
+<li><a id="org503141e"></a>Prompt Template for highway lane change decision<br />
+<div class="outline-text-5" id="text-org503141e">
+<div class="org-src-container">
+<pre class="src src-python" id="orgeee51ff"><span style="font-weight: bold;">import</span> os
+<span style="font-weight: bold;">import</span> openai
+<span style="font-weight: bold;">from</span> dotenv <span style="font-weight: bold;">import</span> load_dotenv
+<span style="font-weight: bold;">from</span> pathlib <span style="font-weight: bold;">import</span> Path  <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Python 3.6+ only</span>
+<span style="font-weight: bold;">import</span> pprint
+<span style="font-weight: bold; font-style: italic;">pp</span> = pprint.PrettyPrinter(indent=4)
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">load_dotenv(verbose=True)</span>
+<span style="font-weight: bold; font-style: italic;">env_path</span> = Path(<span style="font-style: italic;">'.'</span>) / <span style="font-style: italic;">'.env'</span>
+load_dotenv(dotenv_path=env_path)
+<span style="font-weight: bold; font-style: italic;">openai_api_key</span>=os.environ.get(<span style="font-style: italic;">'OPENAI_API4_LANGCHAIN'</span>)
+openai.<span style="font-weight: bold; font-style: italic;">proxy</span> = os.environ.get(<span style="font-style: italic;">'HTTP_PROXY'</span>)
+
+
+<span style="font-weight: bold;">from</span> langchain.llms <span style="font-weight: bold;">import</span> OpenAI
+<span style="font-weight: bold;">from</span> langchain <span style="font-weight: bold;">import</span> PromptTemplate
+
+<span style="font-weight: bold; font-style: italic;">llm</span> = OpenAI(model_name=<span style="font-style: italic;">"text-davinci-003"</span>, openai_api_key=openai_api_key)
+
+<span style="font-weight: bold; font-style: italic;">template</span> = <span style="font-style: italic;">"""</span>
+<span style="font-style: italic;">"You're an experienced safe driver. {objects_on_left_lane}. The front car is {front_car_distance} ahead of me {front_car_speed}. I'm driving {ego_speed}. {condition_of_urgency}, should I change my lane or keep following the front car?"</span>
+<span style="font-style: italic;">"""</span>
+<span style="font-weight: bold; font-style: italic;">prompt1</span> = PromptTemplate(
+    input_variables=[<span style="font-style: italic;">"objects_on_left_lane"</span>,<span style="font-style: italic;">"front_car_distance"</span>, <span style="font-style: italic;">"front_car_speed"</span>, <span style="font-style: italic;">"ego_speed"</span>, <span style="font-style: italic;">"condition_of_urgency"</span>],
+    template=template,
+)
+pp.pprint(f<span style="font-style: italic;">"prompt1: </span>{prompt1}<span style="font-style: italic;">"</span>)
+<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">return prompt1</span>
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">prompt1</span>
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org04d75bf"></a>lane change case 1<br />
+<div class="outline-text-5" id="text-org04d75bf">
+
+<div id="org093c00b" class="figure">
+<p><img src="./img/Use_Cases/_20231011_16584629.png" alt="_20231011_16584629.png" />
+</p>
+</div>
+
+
+<div id="org1ba000f" class="figure">
+<p><img src="./img/Use_Cases/_20231011_165912single_mo_follow.gif" alt="_20231011_165912single_mo_follow.gif" />
+</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.0.50 (<a href="https://orgmode.org">Org</a> mode 9.6.7)</p>
+</div>
+</body>
+</html>
